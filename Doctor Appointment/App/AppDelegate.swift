@@ -8,13 +8,19 @@
 import UIKit
 import CoreData
 
+extension String {
+    func localized() -> String {
+        NSLocalizedString(self, tableName: "Localizable", bundle: .main, value: self, comment: self)
+    }
+}
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
         return true
     }
 

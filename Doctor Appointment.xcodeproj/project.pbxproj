@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55514B632C35FA7C006B2494 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55514B612C35FA7C006B2494 /* Nunito-Bold.ttf */; };
+		55B2631F2C3580F8009A2C06 /* TabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B2631E2C3580F8009A2C06 /* TabBarPresenter.swift */; };
+		55B263212C358108009A2C06 /* TabBarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B263202C358108009A2C06 /* TabBarModel.swift */; };
+		55B263262C3598FD009A2C06 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B263252C3598FD009A2C06 /* HomeController.swift */; };
+		55B263282C35990A009A2C06 /* ScheduleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B263272C35990A009A2C06 /* ScheduleController.swift */; };
+		55B2632A2C359912009A2C06 /* MessagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B263292C359912009A2C06 /* MessagesController.swift */; };
+		55B2632C2C359928009A2C06 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B2632B2C359928009A2C06 /* HomePresenter.swift */; };
+		55B2632E2C359930009A2C06 /* SchedulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B2632D2C359930009A2C06 /* SchedulePresenter.swift */; };
+		55B263302C359938009A2C06 /* MessagesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B2632F2C359938009A2C06 /* MessagesPresenter.swift */; };
+		55B263322C359942009A2C06 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B263312C359942009A2C06 /* ProfilePresenter.swift */; };
+		55B263342C35994E009A2C06 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B263332C35994E009A2C06 /* ProfileController.swift */; };
+		55B263362C359956009A2C06 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B263352C359956009A2C06 /* HomeModel.swift */; };
+		55B263382C35995E009A2C06 /* ScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B263372C35995E009A2C06 /* ScheduleModel.swift */; };
+		55B2633A2C359963009A2C06 /* MessagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B263392C359963009A2C06 /* MessagesModel.swift */; };
+		55B2633C2C359968009A2C06 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B2633B2C359968009A2C06 /* ProfileModel.swift */; };
+		55B2633F2C35AF4A009A2C06 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B2633E2C35AF4A009A2C06 /* TabBarItem.swift */; };
+		55B263422C35E78C009A2C06 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 55B263402C35E78C009A2C06 /* Localizable.strings */; };
 		55FE425B2C352B4800275603 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE425A2C352B4800275603 /* AppDelegate.swift */; };
 		55FE425D2C352B4800275603 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE425C2C352B4800275603 /* SceneDelegate.swift */; };
 		55FE42652C352B4800275603 /* Doctor_Appointment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 55FE42632C352B4800275603 /* Doctor_Appointment.xcdatamodeld */; };
@@ -16,6 +33,24 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		55514B612C35FA7C006B2494 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
+		55B2631E2C3580F8009A2C06 /* TabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPresenter.swift; sourceTree = "<group>"; };
+		55B263202C358108009A2C06 /* TabBarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarModel.swift; sourceTree = "<group>"; };
+		55B263252C3598FD009A2C06 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		55B263272C35990A009A2C06 /* ScheduleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleController.swift; sourceTree = "<group>"; };
+		55B263292C359912009A2C06 /* MessagesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesController.swift; sourceTree = "<group>"; };
+		55B2632B2C359928009A2C06 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		55B2632D2C359930009A2C06 /* SchedulePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulePresenter.swift; sourceTree = "<group>"; };
+		55B2632F2C359938009A2C06 /* MessagesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesPresenter.swift; sourceTree = "<group>"; };
+		55B263312C359942009A2C06 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		55B263332C35994E009A2C06 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		55B263352C359956009A2C06 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		55B263372C35995E009A2C06 /* ScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleModel.swift; sourceTree = "<group>"; };
+		55B263392C359963009A2C06 /* MessagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesModel.swift; sourceTree = "<group>"; };
+		55B2633B2C359968009A2C06 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		55B2633E2C35AF4A009A2C06 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		55B263412C35E78C009A2C06 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		55B263432C35E7C0009A2C06 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		55FE42572C352B4800275603 /* Doctor Appointment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Doctor Appointment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		55FE425A2C352B4800275603 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55FE425C2C352B4800275603 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +72,81 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55514B622C35FA7C006B2494 /* Nunito */ = {
+			isa = PBXGroup;
+			children = (
+				55514B612C35FA7C006B2494 /* Nunito-Bold.ttf */,
+			);
+			path = Nunito;
+			sourceTree = "<group>";
+		};
+		55B263222C3595C8009A2C06 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				55B2633D2C35AF2F009A2C06 /* TabBar */,
+				55B263252C3598FD009A2C06 /* HomeController.swift */,
+				55B263272C35990A009A2C06 /* ScheduleController.swift */,
+				55B263292C359912009A2C06 /* MessagesController.swift */,
+				55B263332C35994E009A2C06 /* ProfileController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		55B263232C3595CD009A2C06 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				55B2631E2C3580F8009A2C06 /* TabBarPresenter.swift */,
+				55B2632B2C359928009A2C06 /* HomePresenter.swift */,
+				55B2632D2C359930009A2C06 /* SchedulePresenter.swift */,
+				55B2632F2C359938009A2C06 /* MessagesPresenter.swift */,
+				55B263312C359942009A2C06 /* ProfilePresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		55B263242C3595D9009A2C06 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				55B263202C358108009A2C06 /* TabBarModel.swift */,
+				55B263352C359956009A2C06 /* HomeModel.swift */,
+				55B263372C35995E009A2C06 /* ScheduleModel.swift */,
+				55B263392C359963009A2C06 /* MessagesModel.swift */,
+				55B2633B2C359968009A2C06 /* ProfileModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		55B2633D2C35AF2F009A2C06 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				55FE42742C352C2F00275603 /* TabBarController.swift */,
+				55B2633E2C35AF4A009A2C06 /* TabBarItem.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		55B263442C35E829009A2C06 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				55514B622C35FA7C006B2494 /* Nunito */,
+				55B263402C35E78C009A2C06 /* Localizable.strings */,
+				55FE42662C352B4A00275603 /* Assets.xcassets */,
+				55FE42682C352B4A00275603 /* LaunchScreen.storyboard */,
+				55FE426B2C352B4A00275603 /* Info.plist */,
+				55FE42632C352B4800275603 /* Doctor_Appointment.xcdatamodeld */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		55B263462C35EF8F009A2C06 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				55FE425A2C352B4800275603 /* AppDelegate.swift */,
+				55FE425C2C352B4800275603 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		55FE424E2C352B4800275603 = {
 			isa = PBXGroup;
 			children = (
@@ -56,23 +166,13 @@
 		55FE42592C352B4800275603 /* Doctor Appointment */ = {
 			isa = PBXGroup;
 			children = (
-				55FE42712C352BE400275603 /* TabBar */,
-				55FE425A2C352B4800275603 /* AppDelegate.swift */,
-				55FE425C2C352B4800275603 /* SceneDelegate.swift */,
-				55FE42662C352B4A00275603 /* Assets.xcassets */,
-				55FE42682C352B4A00275603 /* LaunchScreen.storyboard */,
-				55FE426B2C352B4A00275603 /* Info.plist */,
-				55FE42632C352B4800275603 /* Doctor_Appointment.xcdatamodeld */,
+				55B263242C3595D9009A2C06 /* Models */,
+				55B263222C3595C8009A2C06 /* Views */,
+				55B263232C3595CD009A2C06 /* Presenters */,
+				55B263462C35EF8F009A2C06 /* App */,
+				55B263442C35E829009A2C06 /* Resources */,
 			);
 			path = "Doctor Appointment";
-			sourceTree = "<group>";
-		};
-		55FE42712C352BE400275603 /* TabBar */ = {
-			isa = PBXGroup;
-			children = (
-				55FE42742C352C2F00275603 /* TabBarController.swift */,
-			);
-			path = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -117,6 +217,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 55FE424E2C352B4800275603;
 			productRefGroup = 55FE42582C352B4800275603 /* Products */;
@@ -134,6 +235,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				55FE42672C352B4A00275603 /* Assets.xcassets in Resources */,
+				55514B632C35FA7C006B2494 /* Nunito-Bold.ttf in Resources */,
+				55B263422C35E78C009A2C06 /* Localizable.strings in Resources */,
 				55FE426A2C352B4A00275603 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,16 +248,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55B2631F2C3580F8009A2C06 /* TabBarPresenter.swift in Sources */,
+				55B263212C358108009A2C06 /* TabBarModel.swift in Sources */,
+				55B263302C359938009A2C06 /* MessagesPresenter.swift in Sources */,
+				55B263262C3598FD009A2C06 /* HomeController.swift in Sources */,
+				55B2632C2C359928009A2C06 /* HomePresenter.swift in Sources */,
 				55FE42652C352B4800275603 /* Doctor_Appointment.xcdatamodeld in Sources */,
+				55B2632E2C359930009A2C06 /* SchedulePresenter.swift in Sources */,
+				55B263342C35994E009A2C06 /* ProfileController.swift in Sources */,
+				55B263362C359956009A2C06 /* HomeModel.swift in Sources */,
+				55B2633C2C359968009A2C06 /* ProfileModel.swift in Sources */,
+				55B263282C35990A009A2C06 /* ScheduleController.swift in Sources */,
 				55FE425B2C352B4800275603 /* AppDelegate.swift in Sources */,
 				55FE42752C352C2F00275603 /* TabBarController.swift in Sources */,
+				55B2633F2C35AF4A009A2C06 /* TabBarItem.swift in Sources */,
+				55B2633A2C359963009A2C06 /* MessagesModel.swift in Sources */,
+				55B263382C35995E009A2C06 /* ScheduleModel.swift in Sources */,
 				55FE425D2C352B4800275603 /* SceneDelegate.swift in Sources */,
+				55B2632A2C359912009A2C06 /* MessagesController.swift in Sources */,
+				55B263322C359942009A2C06 /* ProfilePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		55B263402C35E78C009A2C06 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55B263412C35E78C009A2C06 /* en */,
+				55B263432C35E7C0009A2C06 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		55FE42682C352B4A00275603 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -171,6 +298,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -234,6 +362,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -296,7 +425,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Doctor Appointment/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Resources\\LaunchScreen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -324,7 +453,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Doctor Appointment/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Resources\\LaunchScreen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
