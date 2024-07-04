@@ -24,8 +24,21 @@ class TabBarController: UITabBarController {
     
     private lazy var tabView: UIView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.backgroundColor = .white
+        $0.backgroundColor = .systemBackground
         $0.clipsToBounds = true
+        
+        let line = UIView()
+        line.translatesAutoresizingMaskIntoConstraints = false
+        line.backgroundColor = .opaqueSeparator
+        $0.addSubview(line)
+        
+        NSLayoutConstraint.activate([
+            line.topAnchor.constraint(equalTo: $0.topAnchor),
+            line.leadingAnchor.constraint(equalTo: $0.leadingAnchor),
+            line.trailingAnchor.constraint(equalTo: $0.trailingAnchor),
+            line.heightAnchor.constraint(equalToConstant: 1 / UIScreen.main.scale),
+        ])
+        
         $0.addSubview(tabViewStack)
         return $0
     } (UIView())
@@ -51,7 +64,6 @@ class TabBarController: UITabBarController {
     }
     
     private func setupUI() {
-        view.backgroundColor = .systemBlue
         tabBar.isHidden = true
         
         view.addSubview(tabView)
