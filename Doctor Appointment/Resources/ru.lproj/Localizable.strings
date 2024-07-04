@@ -5,7 +5,12 @@
   Created by Игорь Пустыльник on 03.07.2024.
   
 */
+
+// MARK: - TabBar
 "Home"="Главная";
 "Schedule"="Запись";
 "Messages"="Сообщения";
 "Profile"="Профиль";
+
+// MARK: - Home
+"Hello"="Здравствуйте";

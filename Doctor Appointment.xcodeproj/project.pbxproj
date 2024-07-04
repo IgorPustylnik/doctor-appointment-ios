@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		55514B632C35FA7C006B2494 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55514B612C35FA7C006B2494 /* Nunito-Bold.ttf */; };
+		558FEC242C3727A8000FF6EC /* GreetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558FEC232C3727A8000FF6EC /* GreetingView.swift */; };
+		558FEC282C372B50000FF6EC /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 558FEC252C372B50000FF6EC /* Poppins-Bold.ttf */; };
+		558FEC292C372B50000FF6EC /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 558FEC262C372B50000FF6EC /* Poppins-Regular.ttf */; };
 		55B2631F2C3580F8009A2C06 /* TabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B2631E2C3580F8009A2C06 /* TabBarPresenter.swift */; };
 		55B263212C358108009A2C06 /* TabBarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B263202C358108009A2C06 /* TabBarModel.swift */; };
 		55B263262C3598FD009A2C06 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B263252C3598FD009A2C06 /* HomeController.swift */; };
@@ -34,6 +37,9 @@
 
 /* Begin PBXFileReference section */
 		55514B612C35FA7C006B2494 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
+		558FEC232C3727A8000FF6EC /* GreetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingView.swift; sourceTree = "<group>"; };
+		558FEC252C372B50000FF6EC /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		558FEC262C372B50000FF6EC /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		55B2631E2C3580F8009A2C06 /* TabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPresenter.swift; sourceTree = "<group>"; };
 		55B263202C358108009A2C06 /* TabBarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarModel.swift; sourceTree = "<group>"; };
 		55B263252C3598FD009A2C06 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -80,11 +86,38 @@
 			path = Nunito;
 			sourceTree = "<group>";
 		};
+		558FEC272C372B50000FF6EC /* Poppins */ = {
+			isa = PBXGroup;
+			children = (
+				558FEC252C372B50000FF6EC /* Poppins-Bold.ttf */,
+				558FEC262C372B50000FF6EC /* Poppins-Regular.ttf */,
+			);
+			path = Poppins;
+			sourceTree = "<group>";
+		};
+		558FEC2A2C372B65000FF6EC /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				55514B622C35FA7C006B2494 /* Nunito */,
+				558FEC272C372B50000FF6EC /* Poppins */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		5591CADF2C370E60008B7394 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				55B263252C3598FD009A2C06 /* HomeController.swift */,
+				558FEC232C3727A8000FF6EC /* GreetingView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		55B263222C3595C8009A2C06 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5591CADF2C370E60008B7394 /* Home */,
 				55B2633D2C35AF2F009A2C06 /* TabBar */,
-				55B263252C3598FD009A2C06 /* HomeController.swift */,
 				55B263272C35990A009A2C06 /* ScheduleController.swift */,
 				55B263292C359912009A2C06 /* MessagesController.swift */,
 				55B263332C35994E009A2C06 /* ProfileController.swift */,
@@ -128,8 +161,8 @@
 		55B263442C35E829009A2C06 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				558FEC2A2C372B65000FF6EC /* Fonts */,
 				55FE426B2C352B4A00275603 /* Info.plist */,
-				55514B622C35FA7C006B2494 /* Nunito */,
 				55B263402C35E78C009A2C06 /* Localizable.strings */,
 				55FE42662C352B4A00275603 /* Assets.xcassets */,
 				55FE42682C352B4A00275603 /* LaunchScreen.storyboard */,
@@ -236,6 +269,8 @@
 			files = (
 				55FE42672C352B4A00275603 /* Assets.xcassets in Resources */,
 				55514B632C35FA7C006B2494 /* Nunito-Bold.ttf in Resources */,
+				558FEC282C372B50000FF6EC /* Poppins-Bold.ttf in Resources */,
+				558FEC292C372B50000FF6EC /* Poppins-Regular.ttf in Resources */,
 				55B263422C35E78C009A2C06 /* Localizable.strings in Resources */,
 				55FE426A2C352B4A00275603 /* Base in Resources */,
 			);
@@ -261,6 +296,7 @@
 				55B263282C35990A009A2C06 /* ScheduleController.swift in Sources */,
 				55FE425B2C352B4800275603 /* AppDelegate.swift in Sources */,
 				55FE42752C352C2F00275603 /* TabBarController.swift in Sources */,
+				558FEC242C3727A8000FF6EC /* GreetingView.swift in Sources */,
 				55B2633F2C35AF4A009A2C06 /* TabBarItem.swift in Sources */,
 				55B2633A2C359963009A2C06 /* MessagesModel.swift in Sources */,
 				55B263382C35995E009A2C06 /* ScheduleModel.swift in Sources */,

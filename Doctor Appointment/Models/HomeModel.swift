@@ -31,7 +31,7 @@ struct NearDoctor {
 
 class HomeModel {
     let userName: String = "James"
-    let profilePicture: String = "profile"
+    let profilePicture: String = "profilePicture"
     
     let nextAppointment = NextAppointment(
         name: "Dr. Imran Syahir", rank: "General Doctor",

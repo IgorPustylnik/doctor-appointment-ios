@@ -63,7 +63,7 @@ class TabBarItem: UIView {
         self.imageRightConstraints = imageRightConstraints
         self.isActive = isActive
         self.isSelected = isSelected
-        super.init (frame: .zero)
+        super.init(frame: .zero)
         setupUI()
     }
     
