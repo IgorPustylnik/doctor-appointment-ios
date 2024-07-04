@@ -81,16 +81,6 @@ class TabBarController: UITabBarController {
         ])
     }
     
-    private func setupTabBar(pages: [TabItem]) {
-        pages.enumerated().forEach { item in
-            if item.offset == 0 {
-                tabViewStack.addArrangedSubview(createTabItem(item: item.element, isFirst: true))
-            } else {
-                tabViewStack.addArrangedSubview(createTabItem(item: item.element))
-            }
-        }
-    }
-    
     private func createTabItem(item: TabItem, isFirst: Bool = false) -> UIView {
         TabBarItem(tabItem: item, isActive: isFirst) { [weak self] selectedItem in
             guard let self = self else { return }
@@ -104,13 +94,18 @@ class TabBarController: UITabBarController {
             self.selectedIndex = item.index
         }
     }
-
 }
 
 extension TabBarController: TabBarInputDelegate {
     func setupTabs(with tabs: [TabItem]) {
-        setupTabBar(pages: tabs)
-     }
+        tabs.enumerated().forEach { item in
+            if item.offset == 0 {
+                tabViewStack.addArrangedSubview(createTabItem(item: item.element, isFirst: true))
+            } else {
+                tabViewStack.addArrangedSubview(createTabItem(item: item.element))
+            }
+        }
+    }
     
     func setupVCs(with vcs: [UIViewController]) {
         setViewControllers(vcs, animated: true)
