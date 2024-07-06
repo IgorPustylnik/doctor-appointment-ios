@@ -30,4 +30,9 @@ extension HomePresenter: HomeOutputDelegate {
         let appointment = homeModel.nextAppointment
         inputDelegate?.setNextAppointment(appointment)
     }
+    
+    func fetchShortcuts() {
+        let shortcuts = homeModel.shortcuts
+        inputDelegate?.setShortcuts(with: shortcuts)
+    }
 }

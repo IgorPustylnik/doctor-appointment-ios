@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Appointment {
     let doctor: Doctor
@@ -13,10 +14,18 @@ struct Appointment {
     let dateTill: Date?
 }
 
-struct CircularButton {
-    let index: Int
+struct Shortcut {
     let name: String
     let image: String
+    let link: UIViewController.Type
+
+    func clicked(completion: @escaping (UIViewController) -> Void) {
+        if link == DummyController.self {
+            completion(DummyController(text: name))
+        } else {
+            completion(UIViewController())
+        }
+    }
 }
 
 struct NearDoctor {
@@ -35,11 +44,12 @@ class HomeModel {
         dateFrom: createDate(year: 2022, month: 6, day: 12, hour: 11, minute: 00),
         dateTill: createDate(year: 2022, month: 7, day: 12, hour: 12, minute: 00))
     
-    let circularButtons: [CircularButton] = [
-        CircularButton(index: 0, name: "Covid 19", image: "covid"),
-        CircularButton(index: 1, name: "Doctor", image: "doctor"),
-        CircularButton(index: 2, name: "Medicine", image: "medicine"),
-        CircularButton(index: 3, name: "Hospital", image: "hospital"),
+    let shortcuts: [Shortcut] = [
+        Shortcut(name: "Covid-19", image: "covid", link: DummyController.self),
+        Shortcut(name: "Doctor".localized(), image: "doctor", link: DummyController.self),
+        Shortcut(name: "Medicine".localized(), image: "medicine", link: DummyController.self),
+        Shortcut(name: "Hospital".localized(), image: "hospital", link: DummyController.self),
+        Shortcut(name: "Hospital".localized(), image: "hospital", link: DummyController.self),
     ]
     
     lazy var nearDoctors: [NearDoctor] = [
@@ -57,7 +67,7 @@ extension HomeModel {
         if !(1...12).contains(month) { return nil }
         if !(1...31).contains(day) { return nil }
         if !(0...23).contains(hour) { return nil }
-        if !(0...59).contains(minute) { return nil}
+        if !(0...59).contains(minute) { return nil }
         let calendar = Calendar.current
         var dateComponents = DateComponents()
         dateComponents.year = year

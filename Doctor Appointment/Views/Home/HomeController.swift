@@ -12,11 +12,13 @@ import UIKit
 protocol HomeInputDelegate {
     func setUser(_ user: User)
     func setNextAppointment(_ appointment: Appointment)
+    func setShortcuts(with shortcuts: [Shortcut])
 }
 
 protocol HomeOutputDelegate {
     func fetchUser()
     func fetchNextAppointment()
+    func fetchShortcuts()
 }
 
 // MARK: - HomeController
@@ -42,6 +44,7 @@ class HomeController: UIViewController {
     private lazy var greetingView = GreetingView()
     private lazy var nextAppointmentView = NextAppointmentView()
     private lazy var searchTextField = SearchTextField(searchDelegate: self)
+    private lazy var shortcutsCollectionView = ShortcutsCollectionView(shortcutsDelegate: self)
     
     // MARK: - Lifecycle
 
@@ -51,6 +54,7 @@ class HomeController: UIViewController {
         presenter.setInputDelegate(homeInputDelegate: self)
         outputDelegate?.fetchUser()
         outputDelegate?.fetchNextAppointment()
+        outputDelegate?.fetchShortcuts()
         setupUI()
     }
     
@@ -64,6 +68,7 @@ class HomeController: UIViewController {
         contentView.addSubview(greetingView)
         contentView.addSubview(nextAppointmentView)
         contentView.addSubview(searchTextField)
+        contentView.addSubview(shortcutsCollectionView)
     
         NSLayoutConstraint.activate([
             scrollView.topAnchor.constraint(equalTo: view.topAnchor),
@@ -90,6 +95,13 @@ class HomeController: UIViewController {
             searchTextField.heightAnchor.constraint(equalToConstant: 56),
             searchTextField.leadingAnchor.constraint(equalTo: nextAppointmentView.leadingAnchor),
             searchTextField.trailingAnchor.constraint(equalTo: nextAppointmentView.trailingAnchor),
+            
+            shortcutsCollectionView.topAnchor.constraint(equalTo: searchTextField.bottomAnchor, constant: 24),
+            shortcutsCollectionView.heightAnchor.constraint(equalToConstant: 103),
+            shortcutsCollectionView.leadingAnchor.constraint(equalTo: searchTextField.leadingAnchor),
+            shortcutsCollectionView.trailingAnchor.constraint(equalTo: searchTextField.trailingAnchor),
+            
+            shortcutsCollectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -100)
         ])
         
         let hConst = contentView.heightAnchor.constraint(equalTo: scrollView.heightAnchor)
@@ -97,7 +109,7 @@ class HomeController: UIViewController {
         hConst.priority = UILayoutPriority(50)
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        view.addGestureRecognizer(tap)
+//        view.addGestureRecognizer(tap)
     }
     
     @objc private func dismissKeyboard() {
@@ -115,6 +127,10 @@ extension HomeController: HomeInputDelegate {
     func setNextAppointment(_ appointment: Appointment) {
         nextAppointmentView.setAppointment(appointment: appointment)
     }
+    
+    func setShortcuts(with shortcuts: [Shortcut]) {
+        shortcutsCollectionView.setShortcuts(with: shortcuts)
+    }
 }
 
 // MARK: - Search Delegate
@@ -122,6 +138,16 @@ extension HomeController: HomeInputDelegate {
 extension HomeController: SearchDelegate {
     func search(query: String) {
         print("Search: \(query)")
+    }
+    
+}
+
+// MARK: - Shortcuts Delegate
+
+extension HomeController: ShortcutsDelegate {
+    func showVC(_ vc: UIViewController) {
+        vc.modalPresentationStyle = .pageSheet
+        self.present(vc, animated: true)
     }
     
 }
