@@ -31,6 +31,7 @@ class SearchTextField: UITextField {
     init(searchDelegate: SearchDelegate) {
         self.searchDelegate = searchDelegate
         super.init(frame: .zero)
+        self.delegate = self
         setupUI()
     }
     
@@ -55,4 +56,15 @@ class SearchTextField: UITextField {
         leftViewMode = .always
     }
     
+}
+
+extension SearchTextField: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == self {
+            resignFirstResponder()
+            guard let query = text else { return true }
+            searchDelegate?.search(query: query)
+        }
+        return true
+    }
 }
