@@ -14,7 +14,7 @@ class TabBarItem: UIView {
     var isActive: Bool {
         willSet {
             self.imageRightConstraints?.isActive = !newValue
-            self.contentView.backgroundColor = newValue ? .selectedTabBarItem : .clear
+            self.contentView.backgroundColor = newValue ? .appSelectedTabBarItem : .clear
             self.tabImage.image = newValue ?
                 self.tabImage.image?.withTintColor(.appBlue, renderingMode: .alwaysOriginal) :
                 self.tabImage.image?.withTintColor(.appGrey, renderingMode: .alwaysOriginal)
@@ -29,7 +29,7 @@ class TabBarItem: UIView {
     
     private lazy var contentView: UIView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.backgroundColor = isActive ? .selectedTabBarItem : .clear
+        $0.backgroundColor = isActive ? .appSelectedTabBarItem : .clear
         $0.layer.cornerRadius = 12
         
         $0.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapOnTab)))
