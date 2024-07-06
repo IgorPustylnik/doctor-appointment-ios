@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct NextAppointment {
+struct Appointment {
     let doctor: Doctor
     let dateFrom: Date?
     let dateTill: Date?
@@ -28,15 +28,12 @@ struct NearDoctor {
 }
 
 class HomeModel {
-    let userName: String = "James"
-    let profilePicture: String = "profilePicture"
-    
     private let doctorsModel = DoctorsModel()
     
-    lazy var nextAppointment = NextAppointment(
+    lazy var nextAppointment = Appointment(
         doctor: doctorsModel.getDoctor(id: 0)!,
-        dateFrom: createDate(year: 2024, month: 6, day: 12, hour: 11, minute: 00),
-        dateTill: createDate(year: 2024, month: 7, day: 12, hour: 12, minute: 00))
+        dateFrom: createDate(year: 2022, month: 6, day: 12, hour: 11, minute: 00),
+        dateTill: createDate(year: 2022, month: 7, day: 12, hour: 12, minute: 00))
     
     let circularButtons: [CircularButton] = [
         CircularButton(index: 0, name: "Covid 19", image: "covid"),
@@ -48,10 +45,10 @@ class HomeModel {
     lazy var nearDoctors: [NearDoctor] = [
         NearDoctor(doctor: doctorsModel.getDoctor(id: 1)!,
                    distance: 1.2, rating: 4.8, ratingCount: 120,
-                   openTime: createDate(year: 2024, month: 7, day: 12, hour: 17, minute: 00)),
+                   openTime: createDate(year: 2022, month: 7, day: 12, hour: 17, minute: 00)),
         NearDoctor(doctor: doctorsModel.getDoctor(id: 2)!,
                    distance: 0.8, rating: 4.6, ratingCount: 74,
-                   openTime: createDate(year: 2024, month: 7, day: 12, hour: 10, minute: 00))
+                   openTime: createDate(year: 2022, month: 7, day: 12, hour: 10, minute: 00))
     ]
 }
 

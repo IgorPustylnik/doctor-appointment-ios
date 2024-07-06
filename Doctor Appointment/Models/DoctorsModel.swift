@@ -15,6 +15,8 @@ struct Doctor {
 }
 
 class DoctorsModel {
+    static var shared = DoctorsModel()
+    
     private var doctors: [Doctor] = [
         Doctor(id: 0, name: "Imran Syahir", rank: "General Doctor", photo: "imran_syahir"),
         Doctor(id: 1, name: "Joseph Brostito", rank: "Dental Specialist", photo: "joseph_brostito"),
