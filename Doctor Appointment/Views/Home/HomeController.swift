@@ -41,6 +41,7 @@ class HomeController: UIViewController {
     
     private lazy var greetingView = GreetingView()
     private lazy var nextAppointmentView = NextAppointmentView()
+    private lazy var searchTextField = SearchTextField(searchDelegate: self)
     
     // MARK: - Lifecycle
 
@@ -62,6 +63,7 @@ class HomeController: UIViewController {
         scrollView.addSubview(contentView)
         contentView.addSubview(greetingView)
         contentView.addSubview(nextAppointmentView)
+        contentView.addSubview(searchTextField)
     
         NSLayoutConstraint.activate([
             scrollView.topAnchor.constraint(equalTo: view.topAnchor),
@@ -82,13 +84,24 @@ class HomeController: UIViewController {
             nextAppointmentView.topAnchor.constraint(equalTo: greetingView.bottomAnchor, constant: 32),
             nextAppointmentView.leadingAnchor.constraint(equalTo: greetingView.leadingAnchor),
             nextAppointmentView.trailingAnchor.constraint(equalTo: greetingView.trailingAnchor),
-            nextAppointmentView.heightAnchor.constraint(equalToConstant: 138)
+            nextAppointmentView.heightAnchor.constraint(equalToConstant: 138),
+            
+            searchTextField.topAnchor.constraint(equalTo: nextAppointmentView.bottomAnchor, constant: 20),
+            searchTextField.heightAnchor.constraint(equalToConstant: 56),
+            searchTextField.leadingAnchor.constraint(equalTo: nextAppointmentView.leadingAnchor),
+            searchTextField.trailingAnchor.constraint(equalTo: nextAppointmentView.trailingAnchor),
         ])
         
         let hConst = contentView.heightAnchor.constraint(equalTo: scrollView.heightAnchor)
         hConst.isActive = true
         hConst.priority = UILayoutPriority(50)
         
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc private func dismissKeyboard() {
+        view.endEditing(true)
     }
 }
 
@@ -102,4 +115,13 @@ extension HomeController: HomeInputDelegate {
     func setNextAppointment(_ appointment: Appointment) {
         nextAppointmentView.setAppointment(appointment: appointment)
     }
+}
+
+// MARK: - Search Delegate
+
+extension HomeController: SearchDelegate {
+    func search(query: String) {
+        print("Search: \(query)")
+    }
+    
 }

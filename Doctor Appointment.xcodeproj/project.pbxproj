@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		55514B632C35FA7C006B2494 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55514B612C35FA7C006B2494 /* Nunito-Bold.ttf */; };
+		557D4C8A2C39A50200A1EB1D /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557D4C892C39A50200A1EB1D /* SearchTextField.swift */; };
 		558FEC242C3727A8000FF6EC /* GreetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558FEC232C3727A8000FF6EC /* GreetingView.swift */; };
 		558FEC282C372B50000FF6EC /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 558FEC252C372B50000FF6EC /* Poppins-Bold.ttf */; };
 		558FEC292C372B50000FF6EC /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 558FEC262C372B50000FF6EC /* Poppins-Regular.ttf */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		55514B612C35FA7C006B2494 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
+		557D4C892C39A50200A1EB1D /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
 		558FEC232C3727A8000FF6EC /* GreetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingView.swift; sourceTree = "<group>"; };
 		558FEC252C372B50000FF6EC /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		558FEC262C372B50000FF6EC /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				55B263252C3598FD009A2C06 /* HomeController.swift */,
 				558FEC232C3727A8000FF6EC /* GreetingView.swift */,
 				55CBD5ED2C37EABF00C6E0C6 /* NextAppointmentView.swift */,
+				557D4C892C39A50200A1EB1D /* SearchTextField.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				55B263212C358108009A2C06 /* TabBarModel.swift in Sources */,
 				55CBD5F02C37ECD600C6E0C6 /* DoctorsModel.swift in Sources */,
 				55B263302C359938009A2C06 /* MessagesPresenter.swift in Sources */,
+				557D4C8A2C39A50200A1EB1D /* SearchTextField.swift in Sources */,
 				55B263262C3598FD009A2C06 /* HomeController.swift in Sources */,
 				55B2632C2C359928009A2C06 /* HomePresenter.swift in Sources */,
 				55FE42652C352B4800275603 /* Doctor_Appointment.xcdatamodeld in Sources */,

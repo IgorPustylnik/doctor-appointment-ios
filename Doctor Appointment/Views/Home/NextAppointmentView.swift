@@ -176,7 +176,7 @@ class NextAppointmentView: UIView {
     private func updateAppointment() {
         if let doctor = appointment?.doctor {
             doctorImageView.image = UIImage(named: doctor.photo)
-            doctorNameLabel.text = "Dr. " + doctor.name
+            doctorNameLabel.text = "Dr.".localized() + " " + doctor.name
             doctorRankLabel.text = doctor.rank
         } else {
             doctorImageView.image = UIImage(systemName: "person.fill.questionmark")?.withRenderingMode(.alwaysOriginal)
