@@ -42,7 +42,7 @@ class SearchTextField: UITextField {
     private func setupUI() {
         translatesAutoresizingMaskIntoConstraints = false
         
-        backgroundColor = .appSecondaryBackgroud
+        backgroundColor = .appSecondaryBackground
         layer.cornerRadius = 12
         autocorrectionType = .no
         autocapitalizationType = .none
