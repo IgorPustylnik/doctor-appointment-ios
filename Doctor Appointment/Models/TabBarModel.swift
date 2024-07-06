@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct TabItem {
     let index: Int
@@ -14,6 +15,13 @@ struct TabItem {
 }
 
 class TabBarModel {
+    let controllers: [UIViewController] = [
+        HomeController(),
+        ScheduleController(),
+        MessagesController(),
+        ProfileController()
+    ]
+    
     let tabItems: [TabItem] = [
         TabItem(index: 0, name: "Home".localized(), image: "home"),
         TabItem(index: 1, name: "Schedule".localized(), image: "calendar"),
