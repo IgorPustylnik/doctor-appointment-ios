@@ -8,14 +8,15 @@
 import UIKit
 
 class GreetingView: UIView {
-    private var name: String
-    private var profilePicture: String
+    private var user: User?
+    
+    // MARK: - UI Elements
     
     private lazy var greetingTextStackView: UIStackView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.axis = .vertical
-//        $0.alignment = .fill
-//        $0.distribution = .fillProportionally
+        $0.alignment = .fill
+        $0.distribution = .fillEqually
         $0.spacing = 6
         
         let label1 = UILabel()
@@ -23,20 +24,21 @@ class GreetingView: UIView {
         label1.textColor = .appGrey
         label1.font = UIFont(name: "Poppins-Regular", size: 16)
         
-        let label2 = UILabel()
-        label2.text = name
-        label2.textColor = .appMainText
-        label2.font = UIFont(name: "Poppins-Bold", size: 20)
-        
         $0.addArrangedSubview(label1)
-        $0.addArrangedSubview(label2)
+        $0.addArrangedSubview(userNameLabel)
         
         return $0
     } (UIStackView())
     
+    private lazy var userNameLabel: UILabel = {
+        $0.textColor = .appMainText
+        $0.font = UIFont(name: "Poppins-Bold", size: 20)
+        return $0
+    } (UILabel())
+    
     private lazy var profileImageView: UIImageView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.image = UIImage(named: profilePicture)
+        $0.clipsToBounds = true
         
         NSLayoutConstraint.activate([
             $0.widthAnchor.constraint(equalToConstant: 56),
@@ -45,9 +47,9 @@ class GreetingView: UIView {
         return $0
     } (UIImageView())
     
-    init(name: String, profilePicture: String) {
-        self.name = name
-        self.profilePicture = profilePicture
+    // MARK: - Lifecycle
+    
+    init() {
         super.init(frame: .zero)
         setupUI()
     }
@@ -55,6 +57,23 @@ class GreetingView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    func setUser(user: User) {
+        self.user = user
+        updateUser()
+    }
+    
+    private func updateUser() {
+        if let user = user {
+            userNameLabel.text = user.name
+            profileImageView.image = UIImage(named: user.profilePicture)
+        } else {
+            userNameLabel.text = "???"
+            profileImageView.image = UIImage(systemName: "person.fill.questionmark")?.withRenderingMode(.alwaysOriginal)
+        }
+    }
+    
+    // MARK: - UI Setup
     
     private func setupUI() {
         translatesAutoresizingMaskIntoConstraints = false

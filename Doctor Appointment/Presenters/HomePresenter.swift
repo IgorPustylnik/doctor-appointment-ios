@@ -9,13 +9,25 @@ import Foundation
 
 class HomePresenter {
     private let homeModel: HomeModel
-    private var homeInputDelegate: HomeInputDelegate?
+    private var inputDelegate: HomeInputDelegate?
     
     init(homeModel: HomeModel) {
         self.homeModel = homeModel
     }
     
-    func setViewDelegate(homeInputDelegate: HomeInputDelegate?) {
-        self.homeInputDelegate = homeInputDelegate
+    func setInputDelegate(homeInputDelegate: HomeInputDelegate?) {
+        self.inputDelegate = homeInputDelegate
+    }
+}
+
+extension HomePresenter: HomeOutputDelegate {
+    func fetchUser() {
+        let user = UserModel.shared
+        inputDelegate?.setUser(user)
+    }
+    
+    func fetchNextAppointment() {
+        let appointment = homeModel.nextAppointment
+        inputDelegate?.setNextAppointment(appointment)
     }
 }
