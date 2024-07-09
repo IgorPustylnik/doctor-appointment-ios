@@ -12,6 +12,8 @@
 		557D4C8C2C39B60C00A1EB1D /* ShortcutsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557D4C8B2C39B60C00A1EB1D /* ShortcutsCollectionView.swift */; };
 		557D4C8E2C39B99800A1EB1D /* ShortcutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557D4C8D2C39B99800A1EB1D /* ShortcutCell.swift */; };
 		557D4C922C39C3FC00A1EB1D /* DummyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557D4C912C39C3FC00A1EB1D /* DummyController.swift */; };
+		557D4C942C3A5CED00A1EB1D /* NearbyDoctorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557D4C932C3A5CED00A1EB1D /* NearbyDoctorView.swift */; };
+		557D4C962C3ACAE000A1EB1D /* NearbyDoctorsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557D4C952C3ACAE000A1EB1D /* NearbyDoctorsStackView.swift */; };
 		558FEC242C3727A8000FF6EC /* GreetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558FEC232C3727A8000FF6EC /* GreetingView.swift */; };
 		558FEC282C372B50000FF6EC /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 558FEC252C372B50000FF6EC /* Poppins-Bold.ttf */; };
 		558FEC292C372B50000FF6EC /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 558FEC262C372B50000FF6EC /* Poppins-Regular.ttf */; };
@@ -34,6 +36,7 @@
 		55CBD5EE2C37EAC000C6E0C6 /* NextAppointmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CBD5ED2C37EABF00C6E0C6 /* NextAppointmentView.swift */; };
 		55CBD5F02C37ECD600C6E0C6 /* DoctorsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CBD5EF2C37ECD600C6E0C6 /* DoctorsModel.swift */; };
 		55CBD5F22C380A8F00C6E0C6 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CBD5F12C380A8F00C6E0C6 /* UserModel.swift */; };
+		55FD7DF32C3DD29D00356FCE /* UIView  + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FD7DF12C3DD29D00356FCE /* UIView  + ext.swift */; };
 		55FE425B2C352B4800275603 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE425A2C352B4800275603 /* AppDelegate.swift */; };
 		55FE425D2C352B4800275603 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE425C2C352B4800275603 /* SceneDelegate.swift */; };
 		55FE42652C352B4800275603 /* Doctor_Appointment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 55FE42632C352B4800275603 /* Doctor_Appointment.xcdatamodeld */; };
@@ -48,6 +51,8 @@
 		557D4C8B2C39B60C00A1EB1D /* ShortcutsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutsCollectionView.swift; sourceTree = "<group>"; };
 		557D4C8D2C39B99800A1EB1D /* ShortcutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutCell.swift; sourceTree = "<group>"; };
 		557D4C912C39C3FC00A1EB1D /* DummyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyController.swift; sourceTree = "<group>"; };
+		557D4C932C3A5CED00A1EB1D /* NearbyDoctorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyDoctorView.swift; sourceTree = "<group>"; };
+		557D4C952C3ACAE000A1EB1D /* NearbyDoctorsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyDoctorsStackView.swift; sourceTree = "<group>"; };
 		558FEC232C3727A8000FF6EC /* GreetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingView.swift; sourceTree = "<group>"; };
 		558FEC252C372B50000FF6EC /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		558FEC262C372B50000FF6EC /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
@@ -71,6 +76,7 @@
 		55CBD5ED2C37EABF00C6E0C6 /* NextAppointmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextAppointmentView.swift; sourceTree = "<group>"; };
 		55CBD5EF2C37ECD600C6E0C6 /* DoctorsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorsModel.swift; sourceTree = "<group>"; };
 		55CBD5F12C380A8F00C6E0C6 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		55FD7DF12C3DD29D00356FCE /* UIView  + ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView  + ext.swift"; sourceTree = "<group>"; };
 		55FE42572C352B4800275603 /* Doctor Appointment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Doctor Appointment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		55FE425A2C352B4800275603 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55FE425C2C352B4800275603 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +133,8 @@
 				557D4C892C39A50200A1EB1D /* SearchTextField.swift */,
 				557D4C8B2C39B60C00A1EB1D /* ShortcutsCollectionView.swift */,
 				557D4C8D2C39B99800A1EB1D /* ShortcutCell.swift */,
+				557D4C932C3A5CED00A1EB1D /* NearbyDoctorView.swift */,
+				557D4C952C3ACAE000A1EB1D /* NearbyDoctorsStackView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -201,6 +209,14 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		55FD7DF22C3DD29D00356FCE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				55FD7DF12C3DD29D00356FCE /* UIView  + ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		55FE424E2C352B4800275603 = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +236,7 @@
 		55FE42592C352B4800275603 /* Doctor Appointment */ = {
 			isa = PBXGroup;
 			children = (
+				55FD7DF22C3DD29D00356FCE /* Extensions */,
 				55B263242C3595D9009A2C06 /* Models */,
 				55B263222C3595C8009A2C06 /* Views */,
 				55B263232C3595CD009A2C06 /* Presenters */,
@@ -319,12 +336,15 @@
 				55CBD5F22C380A8F00C6E0C6 /* UserModel.swift in Sources */,
 				55B263342C35994E009A2C06 /* ProfileController.swift in Sources */,
 				55B263362C359956009A2C06 /* HomeModel.swift in Sources */,
+				557D4C962C3ACAE000A1EB1D /* NearbyDoctorsStackView.swift in Sources */,
 				55B2633C2C359968009A2C06 /* ProfileModel.swift in Sources */,
 				55B263282C35990A009A2C06 /* ScheduleController.swift in Sources */,
+				557D4C942C3A5CED00A1EB1D /* NearbyDoctorView.swift in Sources */,
 				55FE425B2C352B4800275603 /* AppDelegate.swift in Sources */,
 				55FE42752C352C2F00275603 /* TabBarController.swift in Sources */,
 				558FEC242C3727A8000FF6EC /* GreetingView.swift in Sources */,
 				55B2633F2C35AF4A009A2C06 /* TabBarItem.swift in Sources */,
+				55FD7DF32C3DD29D00356FCE /* UIView  + ext.swift in Sources */,
 				55B2633A2C359963009A2C06 /* MessagesModel.swift in Sources */,
 				55CBD5EE2C37EAC000C6E0C6 /* NextAppointmentView.swift in Sources */,
 				55B263382C35995E009A2C06 /* ScheduleModel.swift in Sources */,

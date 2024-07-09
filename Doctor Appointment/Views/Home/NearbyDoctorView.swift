@@ -1,27 +1,21 @@
 //
-//  NextAppoinmentView.swift
+//  NearbyDoctorsCollectionView.swift
 //  Doctor Appointment
 //
-//  Created by Игорь Пустыльник on 05.07.2024.
+//  Created by Игорь Пустыльник on 07.07.2024.
 //
 
 import UIKit
 
-class NextAppointmentView: UIView {
-    private var appointment: Appointment?
+class NearbyDoctorView: UIView {
     
     // MARK: - UI Elements
     
     private lazy var topView: UIView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        
-        let tap = UITapGestureRecognizer(target: self, action: #selector(clickedTopView))
-        $0.addGestureRecognizer(tap)
-        
         $0.addSubview(doctorImageView)
         $0.addSubview(doctorTextView)
-        $0.addSubview(chevronView)
-        
+        $0.addSubview(distanceView)
         
         NSLayoutConstraint.activate([
             doctorImageView.topAnchor.constraint(equalTo: $0.topAnchor),
@@ -32,16 +26,12 @@ class NextAppointmentView: UIView {
             doctorTextView.leadingAnchor.constraint(equalTo: doctorImageView.trailingAnchor, constant: 12),
             doctorTextView.centerYAnchor.constraint(equalTo: $0.centerYAnchor),
             
-            chevronView.centerYAnchor.constraint(equalTo: $0.centerYAnchor),
-            chevronView.trailingAnchor.constraint(equalTo: $0.trailingAnchor),
+            distanceView.centerYAnchor.constraint(equalTo: $0.centerYAnchor),
+            distanceView.trailingAnchor.constraint(equalTo: $0.trailingAnchor),
         ])
         
         return $0
     } (UIView())
-    
-    @objc func clickedTopView() {
-        print(doctorNameLabel.text?.description)
-    }
     
     private lazy var doctorImageView: UIImageView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
@@ -69,7 +59,7 @@ class NextAppointmentView: UIView {
     } (UIStackView())
     
     private lazy var doctorNameLabel: UILabel = {
-        $0.textColor = .white
+        $0.textColor = .appMainText
         $0.font = UIFont(name: "Poppins-Bold", size: 16)
         return $0
     } (UILabel())
@@ -80,13 +70,36 @@ class NextAppointmentView: UIView {
         return $0
     } (UILabel())
     
-    private lazy var chevronView: UIImageView = {
+    private lazy var distanceLabel: UILabel = {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.clipsToBounds = true
-        $0.image = UIImage(systemName: "chevron.right")?.withTintColor(.white, renderingMode: .alwaysOriginal)
+        $0.textColor = .appGrey
+        $0.font = UIFont(name: "Poppins-Regular", size: 14)
+        return $0
+    } (UILabel())
+    
+    private lazy var distanceView: UIView = {
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        let icon = UIImageView()
+        icon.image = UIImage(named: "location")?.withTintColor(.appGrey, renderingMode: .alwaysOriginal)
+        icon.clipsToBounds = true
+        icon.translatesAutoresizingMaskIntoConstraints = false
+        
+        $0.addSubview(distanceLabel)
+        $0.addSubview(icon)
+        
+        NSLayoutConstraint.activate([
+            icon.centerYAnchor.constraint(equalTo: $0.centerYAnchor),
+            icon.leadingAnchor.constraint(equalTo: $0.leadingAnchor),
+            icon.widthAnchor.constraint(equalToConstant: 16),
+            icon.heightAnchor.constraint(equalToConstant: 16),
+            
+            distanceLabel.leadingAnchor.constraint(equalTo: icon.trailingAnchor, constant: 8),
+            distanceLabel.trailingAnchor.constraint(equalTo: $0.trailingAnchor),
+            distanceLabel.centerYAnchor.constraint(equalTo: $0.centerYAnchor)
+        ])
         
         return $0
-    } (UIImageView())
+    } (UIView())
     
     private lazy var lineView: UIView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
@@ -101,22 +114,22 @@ class NextAppointmentView: UIView {
         $0.alignment = .fill
         $0.distribution = .fillEqually
         
-        $0.addArrangedSubview(dateView)
-        $0.addArrangedSubview(timeView)
+        $0.addArrangedSubview(ratingView)
+        $0.addArrangedSubview(openTimeView)
         
         return $0
     } (UIStackView())
     
-    private lazy var dateView: UIView = {
+    private lazy var ratingView: UIView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
         
-        let icon = UIImageView(image: UIImage(named: "calendar")?.withTintColor(.white))
+        let icon = UIImageView(image: UIImage(systemName: "star.fill")?.withTintColor(.appYellow, renderingMode: .alwaysOriginal))
         
         icon.translatesAutoresizingMaskIntoConstraints = false
         icon.clipsToBounds = true
         
         $0.addSubview(icon)
-        $0.addSubview(dateLabel)
+        $0.addSubview(ratingLabel)
         
         NSLayoutConstraint.activate([
             icon.topAnchor.constraint(equalTo: $0.topAnchor),
@@ -124,28 +137,28 @@ class NextAppointmentView: UIView {
             icon.widthAnchor.constraint(equalToConstant: 16),
             icon.heightAnchor.constraint(equalToConstant: 16),
             
-            dateLabel.leadingAnchor.constraint(equalTo: icon.trailingAnchor, constant: 8),
-            dateLabel.centerYAnchor.constraint(equalTo: $0.centerYAnchor)
+            ratingLabel.leadingAnchor.constraint(equalTo: icon.trailingAnchor, constant: 8),
+            ratingLabel.centerYAnchor.constraint(equalTo: $0.centerYAnchor)
         ])
         
         return $0
     } (UIView())
     
-    private lazy var dateLabel: UILabel = {
+    private lazy var ratingLabel: UILabel = {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.textColor = .white
+        $0.textColor = .appYellow
         $0.font = UIFont(name: "Poppins-Regular", size: 12)
         return $0
     } (UILabel())
     
-    private lazy var timeView: UIView = {
+    private lazy var openTimeView: UIView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
         
         let icon = UIImageView(image: UIImage(systemName: "clock")?.withTintColor(.white, renderingMode: .alwaysOriginal))
         icon.translatesAutoresizingMaskIntoConstraints = false
         
         $0.addSubview(icon)
-        $0.addSubview(timeLabel)
+        $0.addSubview(openTimeLabel)
         
         NSLayoutConstraint.activate([
             icon.topAnchor.constraint(equalTo: $0.topAnchor),
@@ -153,13 +166,13 @@ class NextAppointmentView: UIView {
             icon.widthAnchor.constraint(equalToConstant: 16),
             icon.heightAnchor.constraint(equalToConstant: 16),
             
-            timeLabel.leadingAnchor.constraint(equalTo: icon.trailingAnchor, constant: 8),
-            timeLabel.centerYAnchor.constraint(equalTo: $0.centerYAnchor)
+            openTimeLabel.leadingAnchor.constraint(equalTo: icon.trailingAnchor, constant: 8),
+            openTimeLabel.centerYAnchor.constraint(equalTo: $0.centerYAnchor)
         ])
         return $0
     } (UIView())
     
-    private lazy var timeLabel: UILabel = {
+    private lazy var openTimeLabel: UILabel = {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.textColor = .white
         $0.font = UIFont(name: "Poppins-Regular", size: 12)
@@ -177,62 +190,45 @@ class NextAppointmentView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setAppointment(_ appointment: Appointment) {
-        self.appointment = appointment
-        updateAppointment()
+    public func configure(with nearbyDoctor: NearbyDoctor) {
+        setWithModel(with: nearbyDoctor)
+        layoutIfNeeded()
     }
     
-    private func updateAppointment() {
-        if let doctor = appointment?.doctor {
-            if let photoName = doctor.photo {
-                if let photo = UIImage(named: photoName) {
-                    doctorImageView.image = photo
-                } else {
-                    doctorImageView.image = UIImage(systemName: "person.fill.questionmark")?.withRenderingMode(.alwaysOriginal)
-                }
+    private func setWithModel(with nearbyDoctor: NearbyDoctor) {
+        if let photoName = nearbyDoctor.doctor.photo {
+            if let photo = UIImage(named: photoName) {
+                doctorImageView.image = photo
             } else {
                 doctorImageView.image = UIImage(systemName: "person.fill.questionmark")?.withRenderingMode(.alwaysOriginal)
             }
-            doctorNameLabel.text = "Dr.".localized() + " " + doctor.name
-            doctorRankLabel.text = doctor.rank
         } else {
             doctorImageView.image = UIImage(systemName: "person.fill.questionmark")?.withRenderingMode(.alwaysOriginal)
-            doctorNameLabel.text = "???"
-            doctorRankLabel.text = "???"
         }
         
+        doctorNameLabel.text = "Dr.".localized() + " " + nearbyDoctor.doctor.name
+        doctorRankLabel.text = nearbyDoctor.doctor.rank
+        distanceLabel.text = nearbyDoctor.distance.description + " KM"
+        ratingLabel.text = "\(nearbyDoctor.doctor.rating.0) (\(nearbyDoctor.doctor.rating.1) " + "Reviews".localized() + ")"
+        guard let openTime = nearbyDoctor.openTime else {
+            openTimeLabel.text = "??:??"
+            return
+        }
         let dateFormatter = DateFormatter()
-        var from: String
-        var till: String
-        
-        if let dateFrom = appointment?.dateFrom {
-            dateFormatter.locale = Locale(identifier: Locale.current.identifier)
-            dateFormatter.dateFormat = "EEEE, d MMMM"
-            dateLabel.text = dateFormatter.string(from: dateFrom)
-            
-            dateFormatter.dateFormat = "HH:mm"
-            from = dateFormatter.string(from: dateFrom)
-        } else {
-            from = "??:??"
-            dateLabel.text = "???, ?? ???"
-        }
-        
-        if let dateTill = appointment?.dateTill {
-            till = dateFormatter.string(from: dateTill)
-        } else {
-            till = "??:??"
-        }
-        
-        timeLabel.text = from + " – " + till
-        
+        dateFormatter.dateFormat = "HH:mm"
+        openTimeLabel.text = "Open at".localized() + " \(dateFormatter.string(from: openTime))"
     }
     
-    // MARK: - UI Setup
+    // MARK: -  UI Setup
     
     private func setupUI() {
-        translatesAutoresizingMaskIntoConstraints = false
-        backgroundColor = .appDarkBlue
+        self.translatesAutoresizingMaskIntoConstraints = false
+        backgroundColor = .appBackground
         layer.cornerRadius = 12
+        layer.shadowColor = UIColor.appShadow.cgColor // doesn't change when changing the system appearance
+        layer.shadowRadius = 20
+        layer.shadowOpacity = 0.04
+        layer.shadowOffset = CGSize(width: 2, height: 12)
         
         addSubview(topView)
         addSubview(lineView)
@@ -249,9 +245,11 @@ class NextAppointmentView: UIView {
             lineView.trailingAnchor.constraint(equalTo: topView.trailingAnchor),
             
             bottomView.topAnchor.constraint(equalTo: lineView.bottomAnchor, constant: 16),
-            bottomView.heightAnchor.constraint(equalTo: dateLabel.heightAnchor),
+            bottomView.heightAnchor.constraint(equalTo: ratingLabel.heightAnchor),
             bottomView.leadingAnchor.constraint(equalTo: lineView.leadingAnchor),
             bottomView.trailingAnchor.constraint(equalTo: lineView.trailingAnchor),
+            bottomView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20)
         ])
     }
+    
 }

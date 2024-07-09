@@ -33,6 +33,11 @@ extension HomePresenter: HomeOutputDelegate {
     
     func fetchShortcuts() {
         let shortcuts = homeModel.shortcuts
-        inputDelegate?.setShortcuts(with: shortcuts)
+        inputDelegate?.setShortcuts(shortcuts)
+    }
+    
+    func fetchNearbyDoctors() {
+        let nearbyDoctors = homeModel.nearbyDoctors
+        inputDelegate?.setNearbyDoctors(nearbyDoctors)
     }
 }

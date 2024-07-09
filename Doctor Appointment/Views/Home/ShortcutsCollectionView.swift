@@ -22,6 +22,7 @@ class ShortcutsCollectionView: UICollectionView {
         
         self.translatesAutoresizingMaskIntoConstraints = false
         self.showsHorizontalScrollIndicator = false
+        self.alwaysBounceHorizontal = true
         
         self.shortcutsDelegate = shortcutsDelegate
         self.delegate = self
@@ -33,7 +34,7 @@ class ShortcutsCollectionView: UICollectionView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setShortcuts(with shortcuts: [Shortcut]) {
+    func setShortcuts(_ shortcuts: [Shortcut]) {
         self.shortcuts = shortcuts
     }
     
@@ -64,9 +65,7 @@ extension ShortcutsCollectionView: UICollectionViewDataSource {
 extension ShortcutsCollectionView: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         deselectItem(at: indexPath, animated: true)
-        print(1)
         shortcuts?[indexPath.row].clicked { vc in
-            print(2)
             self.shortcutsDelegate?.showVC(vc)
         }
     }
