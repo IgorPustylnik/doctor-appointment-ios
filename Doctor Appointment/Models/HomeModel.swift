@@ -28,11 +28,9 @@ struct Shortcut {
     }
 }
 
-struct NearDoctor {
+struct NearbyDoctor {
     let doctor: Doctor
     let distance: Double
-    let rating: Double
-    let ratingCount: Int
     let openTime: Date?
 }
 
@@ -52,13 +50,11 @@ class HomeModel {
         Shortcut(name: "Hospital".localized(), image: "hospital", link: DummyController.self),
     ]
     
-    lazy var nearDoctors: [NearDoctor] = [
-        NearDoctor(doctor: doctorsModel.getDoctor(id: 1)!,
-                   distance: 1.2, rating: 4.8, ratingCount: 120,
-                   openTime: createDate(year: 2022, month: 7, day: 12, hour: 17, minute: 00)),
-        NearDoctor(doctor: doctorsModel.getDoctor(id: 2)!,
-                   distance: 0.8, rating: 4.6, ratingCount: 74,
-                   openTime: createDate(year: 2022, month: 7, day: 12, hour: 10, minute: 00))
+    lazy var nearbyDoctors: [NearbyDoctor] = [
+        NearbyDoctor(doctor: doctorsModel.getDoctor(id: 1)!,
+                   distance: 1.2, openTime: createDate(year: 2022, month: 7, day: 12, hour: 17, minute: 00)),
+        NearbyDoctor(doctor: doctorsModel.getDoctor(id: 2)!,
+                   distance: 0.8, openTime: createDate(year: 2022, month: 7, day: 12, hour: 10, minute: 00))
     ]
 }
 

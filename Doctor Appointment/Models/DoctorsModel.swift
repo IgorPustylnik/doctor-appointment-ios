@@ -11,17 +11,18 @@ struct Doctor {
     let id: Int
     let name: String
     let rank: String
-    let photo: String
+    let rating: (Double, Int)
+    let photo: String?
 }
 
 class DoctorsModel {
     static var shared = DoctorsModel()
     
     private var doctors: [Doctor] = [
-        Doctor(id: 0, name: "Imran Syahir", rank: "General Doctor", photo: "imran_syahir"),
-        Doctor(id: 1, name: "Joseph Brostito", rank: "Dental Specialist", photo: "joseph_brostito"),
-        Doctor(id: 2, name: "Bessie Coleman", rank: "Dental Specialist", photo: "bessie_coleman"),
-        Doctor(id: 3, name: "Babe Didrikson", rank: "Dental Specialist", photo: "babe_didrikson"),
+        Doctor(id: 0, name: "Imran Syahir", rank: "General Doctor", rating: (3.2, 91) ,photo: "imran_syahir"),
+        Doctor(id: 1, name: "Joseph Brostito", rank: "Dental Specialist", rating: (4.8, 120), photo: "joseph_brostito"),
+        Doctor(id: 2, name: "Bessie Coleman", rank: "Dental Specialist", rating: (4.1, 154), photo: "bessie_coleman"),
+        Doctor(id: 3, name: "Babe Didrikson", rank: "Dental Specialist", rating: (2.7, 190) , photo: "babe_didrikson"),
     ]
     
     func getDoctor(id: Int) -> Doctor? {
