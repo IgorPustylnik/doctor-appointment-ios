@@ -16,10 +16,6 @@ class TabBarPresenter {
         self.tabBarModel = tabBarModel
     }
     
-    private let viewControllers: [UIViewController] = [
-        HomeController(), ScheduleController(), MessagesController(), ProfileController()
-    ]
-    
     func setViewDelegate(tabBarViewDelegate: TabBarInputDelegate?) {
         self.tabBarInputDelegate = tabBarViewDelegate
     }
@@ -27,7 +23,7 @@ class TabBarPresenter {
 
 extension TabBarPresenter: TabBarOutputDelegate {
     func setupVCs() {
-        tabBarInputDelegate?.setupVCs(with: viewControllers)
+        tabBarInputDelegate?.setupVCs(with: tabBarModel.controllers)
     }
     
     func setupTabs() {

@@ -5,7 +5,19 @@
   Created by Игорь Пустыльник on 03.07.2024.
   
 */
+
+// MARK: - TabBar
 "Home"="Главная";
 "Schedule"="Запись";
 "Messages"="Сообщения";
 "Profile"="Профиль";
+
+// MARK: - Home
+"Hello"="Здравствуйте";
+"Dr."="Доктор";
+"Search doctor or health issue"="Найти доктора или болезнь";
+"Doctor"="Доктор";
+"Medicine"="Лекарства";
+"Hospital"="Больница";
+"Reviews"="Отзывов";
+"Open at"="Работает с";
