@@ -48,7 +48,7 @@ class HomeController: UIViewController {
     private lazy var nextAppointmentView = NextAppointmentView()
     private lazy var searchTextField = SearchTextField(searchDelegate: self)
     private lazy var shortcutsCollectionView = ShortcutsCollectionView(shortcutsDelegate: self)
-    private lazy var nearbyDoctorsStackView = NearbyDoctorsStackView()
+    private lazy var nearbyDoctorsView = NearbyDoctorsView()
     
     // MARK: - Lifecycle
 
@@ -74,7 +74,7 @@ class HomeController: UIViewController {
         contentView.addSubview(nextAppointmentView)
         contentView.addSubview(searchTextField)
         contentView.addSubview(shortcutsCollectionView)
-        contentView.addSubview(nearbyDoctorsStackView)
+        contentView.addSubview(nearbyDoctorsView)
     
         NSLayoutConstraint.activate([
             scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
@@ -107,11 +107,11 @@ class HomeController: UIViewController {
             shortcutsCollectionView.leadingAnchor.constraint(equalTo: searchTextField.leadingAnchor),
             shortcutsCollectionView.trailingAnchor.constraint(equalTo: searchTextField.trailingAnchor),
             
-            nearbyDoctorsStackView.topAnchor.constraint(equalTo: shortcutsCollectionView.bottomAnchor, constant: 32),
-            nearbyDoctorsStackView.leadingAnchor.constraint(equalTo: shortcutsCollectionView.leadingAnchor),
-            nearbyDoctorsStackView.trailingAnchor.constraint(equalTo: shortcutsCollectionView.trailingAnchor),
+            nearbyDoctorsView.topAnchor.constraint(equalTo: shortcutsCollectionView.bottomAnchor, constant: 32),
+            nearbyDoctorsView.leadingAnchor.constraint(equalTo: shortcutsCollectionView.leadingAnchor),
+            nearbyDoctorsView.trailingAnchor.constraint(equalTo: shortcutsCollectionView.trailingAnchor),
             
-            nearbyDoctorsStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -100)
+            nearbyDoctorsView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -100)
         ])
         
         let hConst = contentView.heightAnchor.constraint(equalTo: scrollView.heightAnchor)
@@ -140,7 +140,7 @@ extension HomeController: HomeInputDelegate {
     }
     
     func setNearbyDoctors(_ nearbyDoctors: [NearbyDoctor]) {
-        nearbyDoctorsStackView.setNearbyDoctors(nearbyDoctors)
+        nearbyDoctorsView.setNearbyDoctors(nearbyDoctors)
     }
 }
 

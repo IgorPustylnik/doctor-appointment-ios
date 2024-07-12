@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		550477E52C418A2F00F00CB2 /* NearbyDoctorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550477E42C418A2F00F00CB2 /* NearbyDoctorsView.swift */; };
+		550477E92C418EB000F00CB2 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 550477E82C418EB000F00CB2 /* Poppins-SemiBold.ttf */; };
 		55514B632C35FA7C006B2494 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55514B612C35FA7C006B2494 /* Nunito-Bold.ttf */; };
 		557D4C8A2C39A50200A1EB1D /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557D4C892C39A50200A1EB1D /* SearchTextField.swift */; };
 		557D4C8C2C39B60C00A1EB1D /* ShortcutsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557D4C8B2C39B60C00A1EB1D /* ShortcutsCollectionView.swift */; };
 		557D4C8E2C39B99800A1EB1D /* ShortcutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557D4C8D2C39B99800A1EB1D /* ShortcutCell.swift */; };
 		557D4C922C39C3FC00A1EB1D /* DummyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557D4C912C39C3FC00A1EB1D /* DummyController.swift */; };
 		557D4C942C3A5CED00A1EB1D /* NearbyDoctorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557D4C932C3A5CED00A1EB1D /* NearbyDoctorView.swift */; };
-		557D4C962C3ACAE000A1EB1D /* NearbyDoctorsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557D4C952C3ACAE000A1EB1D /* NearbyDoctorsStackView.swift */; };
 		558FEC242C3727A8000FF6EC /* GreetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558FEC232C3727A8000FF6EC /* GreetingView.swift */; };
 		558FEC282C372B50000FF6EC /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 558FEC252C372B50000FF6EC /* Poppins-Bold.ttf */; };
 		558FEC292C372B50000FF6EC /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 558FEC262C372B50000FF6EC /* Poppins-Regular.ttf */; };
@@ -46,13 +47,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		550477E42C418A2F00F00CB2 /* NearbyDoctorsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyDoctorsView.swift; sourceTree = "<group>"; };
+		550477E82C418EB000F00CB2 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		55514B612C35FA7C006B2494 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
 		557D4C892C39A50200A1EB1D /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
 		557D4C8B2C39B60C00A1EB1D /* ShortcutsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutsCollectionView.swift; sourceTree = "<group>"; };
 		557D4C8D2C39B99800A1EB1D /* ShortcutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutCell.swift; sourceTree = "<group>"; };
 		557D4C912C39C3FC00A1EB1D /* DummyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyController.swift; sourceTree = "<group>"; };
 		557D4C932C3A5CED00A1EB1D /* NearbyDoctorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyDoctorView.swift; sourceTree = "<group>"; };
-		557D4C952C3ACAE000A1EB1D /* NearbyDoctorsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyDoctorsStackView.swift; sourceTree = "<group>"; };
 		558FEC232C3727A8000FF6EC /* GreetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingView.swift; sourceTree = "<group>"; };
 		558FEC252C372B50000FF6EC /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		558FEC262C372B50000FF6EC /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 		558FEC272C372B50000FF6EC /* Poppins */ = {
 			isa = PBXGroup;
 			children = (
+				550477E82C418EB000F00CB2 /* Poppins-SemiBold.ttf */,
 				558FEC252C372B50000FF6EC /* Poppins-Bold.ttf */,
 				558FEC262C372B50000FF6EC /* Poppins-Regular.ttf */,
 			);
@@ -134,7 +137,7 @@
 				557D4C8B2C39B60C00A1EB1D /* ShortcutsCollectionView.swift */,
 				557D4C8D2C39B99800A1EB1D /* ShortcutCell.swift */,
 				557D4C932C3A5CED00A1EB1D /* NearbyDoctorView.swift */,
-				557D4C952C3ACAE000A1EB1D /* NearbyDoctorsStackView.swift */,
+				550477E42C418A2F00F00CB2 /* NearbyDoctorsView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55FE42672C352B4A00275603 /* Assets.xcassets in Resources */,
+				550477E92C418EB000F00CB2 /* Poppins-SemiBold.ttf in Resources */,
 				55514B632C35FA7C006B2494 /* Nunito-Bold.ttf in Resources */,
 				558FEC282C372B50000FF6EC /* Poppins-Bold.ttf in Resources */,
 				558FEC292C372B50000FF6EC /* Poppins-Regular.ttf in Resources */,
@@ -336,7 +340,6 @@
 				55CBD5F22C380A8F00C6E0C6 /* UserModel.swift in Sources */,
 				55B263342C35994E009A2C06 /* ProfileController.swift in Sources */,
 				55B263362C359956009A2C06 /* HomeModel.swift in Sources */,
-				557D4C962C3ACAE000A1EB1D /* NearbyDoctorsStackView.swift in Sources */,
 				55B2633C2C359968009A2C06 /* ProfileModel.swift in Sources */,
 				55B263282C35990A009A2C06 /* ScheduleController.swift in Sources */,
 				557D4C942C3A5CED00A1EB1D /* NearbyDoctorView.swift in Sources */,
@@ -348,6 +351,7 @@
 				55B2633A2C359963009A2C06 /* MessagesModel.swift in Sources */,
 				55CBD5EE2C37EAC000C6E0C6 /* NextAppointmentView.swift in Sources */,
 				55B263382C35995E009A2C06 /* ScheduleModel.swift in Sources */,
+				550477E52C418A2F00F00CB2 /* NearbyDoctorsView.swift in Sources */,
 				55FE425D2C352B4800275603 /* SceneDelegate.swift in Sources */,
 				55B2632A2C359912009A2C06 /* MessagesController.swift in Sources */,
 				55B263322C359942009A2C06 /* ProfilePresenter.swift in Sources */,

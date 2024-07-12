@@ -154,7 +154,7 @@ class NearbyDoctorView: UIView {
     private lazy var openTimeView: UIView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
         
-        let icon = UIImageView(image: UIImage(systemName: "clock")?.withTintColor(.white, renderingMode: .alwaysOriginal))
+        let icon = UIImageView(image: UIImage(systemName: "clock")?.withTintColor(.appBlue, renderingMode: .alwaysOriginal))
         icon.translatesAutoresizingMaskIntoConstraints = false
         
         $0.addSubview(icon)
@@ -174,7 +174,7 @@ class NearbyDoctorView: UIView {
     
     private lazy var openTimeLabel: UILabel = {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.textColor = .white
+        $0.textColor = .appBlue
         $0.font = UIFont(name: "Poppins-Regular", size: 12)
         return $0
     } (UILabel())
