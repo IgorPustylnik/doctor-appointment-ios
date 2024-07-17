@@ -52,6 +52,7 @@ class TabBarController: UITabBarController {
     } (UIStackView())
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         outputDelegate?.setupTabs()
     }
 
